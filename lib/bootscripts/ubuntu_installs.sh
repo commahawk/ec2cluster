@@ -53,16 +53,15 @@ apt-get -y install libopenmpi1 openmpi-bin openmpi-common libopenmpi-dev
 # ruby and ruby gems...
 apt-get -y install ruby-full build-essential
 apt-get -y install rubygems
-#wget http://production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz
-#wget http://rubyforge.org/frs/download.php/45905/rubygems-1.3.1.tgz
-#tar xzvf rubygems-1.3.7.tgz
-#cd rubygems-1.3.7
-#sudo ruby setup.rb
-#sudo ln -s /usr/bin/gem1.8 /usr/bin/gem
-#sudo gem update --system
-#cd ../
-#rm rubygems-1.3.7.tgz
-#rm -R rubygems-1.3.7
+wget http://production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz
+tar xzvf rubygems-1.3.7.tgz
+cd rubygems-1.3.7
+sudo ruby setup.rb
+sudo ln -s /usr/bin/gem1.8 /usr/bin/gem
+sudo gem update --system
+cd ../
+rm rubygems-1.3.7.tgz
+rm -R rubygems-1.3.7
 
 # Gems needed for command runner
 gem install right_http_connection --no-rdoc --no-ri
