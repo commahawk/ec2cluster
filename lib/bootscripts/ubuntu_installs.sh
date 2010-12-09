@@ -51,22 +51,23 @@ apt-get -y install libexpat1-dev
 apt-get -y install libopenmpi1 openmpi-bin openmpi-common libopenmpi-dev
 
 # ruby and ruby gems...
-apt-get -y install ruby-full build-essential
-apt-get -y install rubygems
-wget http://production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz
-tar xzvf rubygems-1.3.7.tgz
-cd rubygems-1.3.7
-sudo ruby setup.rb
-sudo ln -s /usr/bin/gem1.8 /usr/bin/gem
-sudo gem update --system
-cd ../
-rm rubygems-1.3.7.tgz
-rm -R rubygems-1.3.7
+#apt-get -y install ruby-full build-essential
+#apt-get -y install rubygems
+#aptitude install ruby build-essential libopenssl-ruby ruby1.8-dev
+#wget http://production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz
+#tar xzvf rubygems-1.3.7.tgz
+#cd rubygems-1.3.7
+#sudo ruby setup.rb
+#sudo ln -s /usr/bin/gem1.8 /usr/bin/gem
+#sudo gem update --system
+#cd ../
+#rm rubygems-1.3.7.tgz
+#rm -R rubygems-1.3.7
 
 # Gems needed for command runner
-gem install right_http_connection --no-rdoc --no-ri
-gem install right_aws --no-rdoc --no-ri
-gem install activeresource --no-ri --no-rdoc
+#gem install right_http_connection --no-rdoc --no-ri
+#gem install right_aws --no-rdoc --no-ri
+#gem install activeresource --no-ri --no-rdoc
 
 # R & octave installs
 apt-get -y install r-base r-base-core
