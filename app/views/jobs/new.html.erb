@@ -18,7 +18,7 @@
   </p>  
   <p>
     <%= f.label :input_files %> <i>(mybucket/folder/mpi.bin mybucket/folder/script.sh)</i><br />
-    <%= f.text_area :input_files, :cols => 60, :rows => 2, :value =>"ec2cluster/samples/kmeans/input/color100.txt ec2cluster/samples/kmeans/code/Simple_Kmeans.zip ec2cluster/samples/kmeans/code/run_kmeans.sh" %>
+    <%= f.text_area :input_files, :cols => 60, :rows => 2, :value =>"wapo-mahout/input/color100.txt wapo-mahout/script/Simple_Kmeans.zip wapo-mahout/script/run_kmeans.sh" %>
   </p>  
   <p>
     <%= f.label :commands %> <i>(bash script.sh)</i><br />
@@ -32,7 +32,7 @@
   <td width="25%" valign="top">
   <p>
     <%= f.label :output_path %> <i>(mybucket/outputfolder/) </i><br />
-    <%= f.text_field :output_path, :value => "[MYBUCKET]/output/#{Time.now.strftime('%m%d%y%H%M')}/" %>
+    <%= f.text_field :output_path, :value => "wapo-mahout/output/#{Time.now.strftime('%m%d%y%H%M')}/" %>
   </p>  
   <p>
     <%= f.label :number_of_instances %> <i>(integer)</i><br />
