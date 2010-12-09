@@ -58,7 +58,7 @@ apt-get -y install libopenmpi1 openmpi-bin openmpi-common libopenmpi-dev
 # ruby and ruby gems...
 #apt-get -y install ruby-full build-essential
 #apt-get -y install rubygems
-aptitude install ruby build-essential libopenssl-ruby ruby1.8-dev rubygems
+aptitude -y install ruby build-essential libopenssl-ruby ruby1.8-dev rubygems
 #wget http://production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz
 #tar xzvf rubygems-1.3.7.tgz
 #cd rubygems-1.3.7
