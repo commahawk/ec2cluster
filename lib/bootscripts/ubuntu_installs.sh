@@ -37,7 +37,6 @@ echo '%admin ALL=NOPASSWD:ALL' >> /etc/sudoers
 apt-get -y remove ruby
 rm -fr /usr/local/lib/site_ruby
 rm -fr /usr/lib/site_ruby/
-rm -fr /etc/alternatives
 
 # install basic unix tools
 apt-get -y install gawk curl
