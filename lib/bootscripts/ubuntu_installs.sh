@@ -77,7 +77,7 @@ sudo ruby setup.rb --prefix=/usr/lib/ruby/1.8
 cd ..
 rm -R rubygems-1.3.7
 mv /usr/lib/ruby/1.8/lib/* /usr/lib/ruby/1.8
-ln -s /usr/bin/gem1.8 /usr/bin/gem
+ln -s /usr/lib/ruby/1.8/bin/gem1.8 /usr/bin/gem
 
 # Gems needed for command runner
 gem install right_http_connection --no-rdoc --no-ri
