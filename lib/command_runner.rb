@@ -7,7 +7,7 @@
 # Convention is for the supplied command to write all files to the working directory or a path relative to /home/ec2cluster/
 
 require 'rubygems'
-require 'activeresource'
+require 'active_resource'
 require 'right_aws'
 require 'net/http'
 

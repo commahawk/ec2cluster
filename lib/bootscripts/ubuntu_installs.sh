@@ -68,11 +68,21 @@ apt-get -y install libopenmpi1 openmpi-bin openmpi-common libopenmpi-dev
 #cd ../
 #rm rubygems-1.3.7.tgz
 #rm -R rubygems-1.3.7
+apt-get -y install ruby ri rdoc ruby-dev irb
+export GEM_HOME=/usr/lib/ruby/gems/1.8
+wget http://production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz
+tar xzvf rubygems-1.3.7.tgz
+cd rubygems-1.3.7
+sudo ruby setup.rb --prefix=/usr/lib/ruby/1.8
+cd ..
+rm -R rubygems-1.3.7
+mv /usr/lib/ruby/1.8/lib/* /usr/lib/ruby/1.8
+ln -s /usr/bin/gem1.8 /usr/bin/gem
 
 # Gems needed for command runner
-#gem install right_http_connection --no-rdoc --no-ri
-#gem install right_aws --no-rdoc --no-ri
-#gem install activeresource --no-ri --no-rdoc
+gem install right_http_connection --no-rdoc --no-ri
+gem install right_aws --no-rdoc --no-ri
+gem install activeresource --no-ri --no-rdoc
 
 # R & octave installs
 apt-get -y install r-base r-base-core
@@ -185,7 +195,7 @@ then
   su - ec2cluster -c "mpirun -np $CPU_COUNT --hostfile /home/ec2cluster/openmpi_hostfile /home/ec2cluster/hello > cluster_mpi_smoketest.txt"
 
   # kick off ruby command_runner.rb script (only on master node)
-  #su - ec2cluster -c "ruby /home/ec2cluster/ec2cluster/lib/command_runner.rb $CPU_COUNT"  
+  su - ec2cluster -c "ruby /home/ec2cluster/ec2cluster/lib/command_runner.rb $CPU_COUNT"  
   
 else  
   echo "Node is worker, mounting master NFS"
