@@ -10,6 +10,7 @@ require 'rubygems'
 require 'active_resource'
 require 'right_aws'
 require 'net/http'
+require 'yaml'
 
 CPU_COUNT=ARGV[0]
 ENV['CPU_COUNT'] = CPU_COUNT
