@@ -93,6 +93,10 @@ apt-get -y install r-base-dev r-base-html r-base-latex r-cran-date octave3.0
 # http://cran.r-project.org/web/packages/Rmpi/index.html
 # http://cran.r-project.org/web/packages/snow/index.html
 apt-get -y install r-cran-rmpi r-cran-snow
+wget http://cran.r-project.org/src/contrib/flexclust_1.3-1.tar.gz
+wget http://cran.r-project.org/src/contrib/modeltools_0.2-17.tar.gz
+R CMD INSTALL modeltools_0.2-17.tar.gz 
+R CMD INSTALL flexclust_1.3-1.tar.gz 
 
 # # python installs
 # apt-get -y install python-boto python-imaging python-dateutil 
